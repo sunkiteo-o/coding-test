@@ -30,9 +30,12 @@
 
 
 - LIS 에서는 dp 배열에 해당 값이 왔을 때의 최대 길이를 저장한다. 
-- 편리함을 위해 lst, dp 배열 맨 암 인덱스에 [0] 을 추가한다.
+- 편리함을 위해 lst, dp 배열 맨 앞 인덱스에 [0] 을 추가한다.
 
 `  dp[i] = lst[i] 가 올 때의 최대 길이`
 <p> dp[0] ~ dp[i-1] 중 본인보다 작은 값의 dp[index]+1을 해준다.  </p>
+
+### 참고한 풀이 영상
+https://www.youtube.com/watch?v=6QkmRvHMfqs 
 
 
