@@ -1,11 +1,14 @@
-import sys
+n= int(input())
 
-n = int(sys.stdin.readline().strip())
-arr = list(map(int, sys.stdin.readline().split()))
+lst = [0]+list(map(int,input().split()))
 
-cur = ans = arr[0]
-for x in arr[1:]:
-    cur = max(x, cur + x)
-    ans = max(ans, cur)
+dp = [-1000]*(n+1)
 
-print(ans)
+for i in range(1,n+1):
+    if lst[i] + dp[i-1] >= lst[i]:
+        dp[i]=lst[i] + dp[i-1]
+    else: 
+        dp[i]=lst[i]
+
+
+print(max(dp))
